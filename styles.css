@@ -5,6 +5,7 @@ body, html {
   font-family: Arial, sans-serif;
   background-color: white;
   height: 100%;
+  overflow-x: hidden; /* Prevent horizontal scrolling */
 }
 
 /* Top Navigation Bar */
@@ -13,7 +14,7 @@ body, html {
   overflow: hidden;
   position: sticky;
   top:0;
-  z-index: 1000;
+  z-index: 5000;
 }
 
 .navbar-text {
@@ -117,52 +118,52 @@ body, html {
 /* about section */
 
 
-.about h1{
-  font-size: 3rem;
+.about {
+  background: linear-gradient(to bottom, #f9f9f9, #f1f1f1); /* Subtle gradient */
+  padding: 5rem 2rem;
+}
+
+.about h1 {
+  font-family: 'Georgia', serif; /* Classic serif font */
+  font-size: 3.5rem;
   text-align: center;
+  margin-bottom: 2.5rem;
+  color: #002b5c; /* Deep blue for a professional look */
 }
 
-.about p{
-  text-align: center  ;
-  padding-left: 5rem;
-  padding-right: 5rem;
-  font-size: 1.3rem;
-}
-
-.fade-in {
-  opacity: 0;
-  animation: fadeIn 2s ease-in forwards;
-}
-
-@keyframes fadeIn {
-  to {
-      opacity: 1;
-  }
-}
-.image-container {
-  position: relative;
-  width: 100%; /* Adjust width as needed */
-  max-width: 600px; /* Optional: Max width for responsiveness */
-}
-
-.image-container img {
-  width: 120rem; /* Make image responsive */
-  height: 40rem; /* Maintain aspect ratio */
-  /* right:20rem; */
-  /* margin-left: 15rem; */
+.about p {
+  font-family: 'Georgia', serif;
+  text-align: center;
+  padding-left: 3rem;
+  padding-right: 3rem;
+  font-size: 1.4rem;
+  margin-bottom: 2rem;
+  color: #333; /* Darker color for readability */
+  line-height: 1.7;
 }
 
 .text-overlay {
-  position: absolute;
-  top: 40%; /* Center vertically */
-  left: 90%; /* Center horizontally */
-  transform: translate(-50%, -50%); /* Adjust positioning */
-  color: black; /* Text color */
-  padding: 10px; /* Optional: Padding around the text */
-  border-radius: 5px; /* Optional: Rounded corners */
-  text-align: center; /* Optional: Center text */
-  width: 60rem;
+  width: 100%;
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 2rem;
+  text-align: center;
 }
+
+
+
+
+
+/* Optional: Section Divider */
+.about::before {
+  content: "";
+  display: block;
+  width: 80px;
+  height: 3px;
+  background-color: #004080;
+  margin: 0 auto 3rem;
+}
+
 
 
 
@@ -190,6 +191,7 @@ body, html {
   flex-wrap: wrap;
   gap: 16px; /* Adjust the gap between cards */
   padding: 16px;
+  justify-content: center;
 }
 
 .card {
@@ -318,6 +320,7 @@ body, html {
 
   .card {
     width: 20rem; /* Adjust card width for smaller screens */
+    height: 7rem;
   }
 
   .contact-form{
@@ -357,11 +360,10 @@ body, html {
 
   .card {
     flex: 1 1 calc(50% - 32px); /* 2 cards per row on smaller screens */
+    width: 100%
 }
 
-  .single-card .card {
-    width: 100%; /* Full width for the centered card */
-  }
+  
   .contact-form{
     width: 80%;
     /* padding-left: 5rem; */
@@ -384,6 +386,29 @@ body, html {
   .footer-column {
     width: 100%;
     padding: 10px 0;
+  }
+
+  .about {
+    padding: 3rem 1rem;
+  }
+
+  .about h1 {
+    font-size: 2.5rem;
+    margin-bottom: 2rem;
+  }
+
+  .about p {
+    padding: 0 1.5rem;
+    font-size: 1.2rem;
+  }
+
+  .text-overlay {
+    max-width: 95%;
+    padding: 1rem;
+  }
+
+  .text-overlay {
+    padding: 1.5rem;
   }
 }
 
